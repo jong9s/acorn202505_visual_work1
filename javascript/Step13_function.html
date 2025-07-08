@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step13_function</title>
+</head>
+<body>
+    <h1>다양한 모양의 함수</h1>
+    <script>
+        // 함수의 매개변수를 선언할 때 default 값을 지정할 수 있따.
+        function showInfo(num = 0, name = "김구라", addr = "노량진") {
+            console.log(`num: ${num} name: ${name} addr: ${addr}`);
+        }
+
+        showInfo(1, "서종훈", "구리시");
+        showInfo();
+
+        // ...변수명은 rest parameter 를 의미한다.
+        function printMsgs(...args) {
+            console.log(args);
+        }
+
+        printMsgs();
+        printMsgs("hi");
+        printMsgs("hi", "hello", "bye");
+
+        const myObj = {
+            num : 1,
+            action : function() {
+                console.log("어떤 동작을 수행합니다!");
+            }
+        };
+
+        const yourObj = {
+            num : 2,
+            action() {
+                console.log("어떤 동작을 수행합니다!");
+            },
+            fly() {
+                console.log("날아요");
+            }
+        }
+    </script>
+</body>
+</html>
