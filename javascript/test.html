@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div class="container">
-        <button id="getBtn">목록 받아오기</button>
-        <table>
-            <thead>
-                <tr>
-                    <th>번호</th>
-                    <th>제목</th>
-                    <th>작성자</th>
-                    <th>작성일</th>
-                </tr>
-            </thead>
-            <tbody>
-                
-            </tbody>
-        </table>
-    </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>test.html</title>
+  </head>
+  <body>
     <script>
+      const test = new Promise((resolve, reject)=>{
+          let success = true;
 
+          if (success) {
+              resolve("작업 성공");
+          } else {
+              reject("작업 실패");
+          }
+      });
+
+      test
+      .then(result => {
+          console.log("결과: ", result);
+      })
+      .catch(error => {
+          console.log("에러: ", error);
+      });
     </script>
-</body>
+  </body>
 </html>
